@@ -5,10 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>URL-Shortner</title>
+    <link rel="shortcut icon" href="#">
+  
 </head>
 <body>
-    <div class="container">
-  
+  <div class="container">
+  <div id="logo">
+    <img src="../public/scissors.png" alt=""
+    width="120px" height="170px">
+   
+</div>
+ 
    <h1>URL Shortner</h1>
    <form action="/shortUrls" method="POST" class="my-4 form-inline">
        <label for="fullURL" class="sr-only">Url</label>
@@ -41,27 +48,32 @@
                     
 </footer>
 <style>
- .container{
-   margin-top: 50px;
- }
-body{
-  background-color: aliceblue;
-}
- h1{
-   display: flex;
-   justify-content: center;
-   align-items: center;
+  /* .container{
+    /* margin-top: 50px; */
+    
   
+ body{
+   background-color: aliceblue;
  }
- .footer{
-	background-color:#eaeaea;
-	color: black;
-	display: grid;
-	justify-content: center;
-  margin-top: 200px;
-	
-}
+  h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  }
+  .footer{
+     background-color:#eaeaea;
+     color: black;
+     display: grid;
+     justify-content: center;
+   margin-top: 200px;
+     
 
+ }
+ #logo{
+      margin: 30px auto;
+      height: 50px;
+  }
 </style>
 </body>
 </html>

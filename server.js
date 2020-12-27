@@ -12,6 +12,7 @@ mongoose.connect('mongodb://localhost/urlShortner',{
 app.set('view engine','ejs')
 //app.use(express.static('public'));
 app.use(express.urlencoded({extended:false}))
+app.use('/public', express.static('public'));
 app.get('/',async (req,res)=>{
     const shortUrls= await ShortUrl.find()
 res.render('index',{shortUrls:shortUrls})
@@ -20,6 +21,7 @@ app.post('/shortUrls',async (req,res)=>{
   await  ShortUrl.create({full:req.body.fullURL})
   res.redirect('/')
 })
+
 app.get('/:shortUrl',async (req,res)=>{
 const shortUrl=await ShortUrl.findOne({short:req.params.shortUrl})
 if(shortUrl==null){
